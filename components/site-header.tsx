@@ -12,7 +12,8 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
-import { ThemeToggle } from "@/components/theme-toggle"
+
+// import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
   return (

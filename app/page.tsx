@@ -5,7 +5,7 @@ import Image from "next/image"
 
 import { SkillEnum } from "@/types/skill"
 import { projects, testimonials } from "@/lib/data"
-import { useMediaQuery } from "@/hooks/use-media-query"
+// import { useMediaQuery } from "@/hooks/use-media-query"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -16,7 +16,7 @@ import { SocialButtons } from "@/components/social-buttons"
 import { Testimonial } from "@/components/testimonial"
 
 export default function IndexPage() {
-  const isDesktop = useMediaQuery("(min-width: 1024px)")
+  // const isDesktop = useMediaQuery("(min-width: 1024px)")
   const [formdata, setFormdata] = useState({
     fullname: "",
     email: "",
@@ -53,8 +53,8 @@ export default function IndexPage() {
 
   return (
     <section className="container grid items-center gap-6 px-0 pb-8 pt-6 md:py-10">
-      <div className="flex flex-col md:flex-row items-start justify-start md:py-14 px-4 py-10">
-        <div className="flex flex-col md:flex-row-reverse md:justify-between md:items-center md:px-8 items-start justify-start gap-12 md:relative">
+      <div className="flex flex-col items-start justify-start px-4 py-10 md:flex-row md:py-14">
+        <div className="flex flex-col items-start justify-start gap-12 md:relative md:flex-row-reverse md:items-center md:justify-between md:px-8">
           <Image
             alt=""
             src={"/boy.png"}
@@ -78,7 +78,7 @@ export default function IndexPage() {
           />
           <div className="flex flex-col items-start justify-start gap-8 md:gap-20 md:py-5">
             <div className="flex flex-col items-start justify-start gap-3 md:gap-5">
-              <div className="flex items-start justify-start gap-4 display-text-m xl:display-text text-black">
+              <div className="display-text-m xl:display-text flex items-start justify-start gap-4 text-black">
                 <span>Hello I&apos;am</span>
                 <span className="font-extrabold ">Vivien Ogoun.</span>
               </div>
@@ -90,7 +90,7 @@ export default function IndexPage() {
                   Developer
                 </span>
               </div>
-              <div className="flex items-start justify-start gap-4 display-text-m xl:display-text text-black">
+              <div className="display-text-m xl:display-text flex items-start justify-start gap-4 text-black">
                 <span>Based In</span>
                 <span className="font-extrabold">Benin.</span>
               </div>
@@ -102,28 +102,28 @@ export default function IndexPage() {
               unknown printer took a galley of type and scrambled it to specimen
               book.
             </div>
-            <SocialButtons className="md:gap-8 md:absolute -bottom-6" />
+            <SocialButtons className="-bottom-6 md:absolute md:gap-8" />
           </div>
         </div>
       </div>
       <div
         id="skills"
-        className="flex flex-col items-start justify-start lg:justify-center lg:items-center lg:px-12 lg:py-14 px-4 py-10"
+        className="flex flex-col items-start justify-start px-4 py-10 lg:items-center lg:justify-center lg:px-12 lg:py-14"
       >
         <div className="flex w-full flex-col items-start justify-start gap-5">
-          <div className="flex items-center justify-center gap-4 py-5 w-full display-text-m text-black lg:display-text">
+          <div className="display-text-m lg:display-text flex w-full items-center justify-center gap-4 py-5 text-black">
             <span>My</span>
             <span className="font-extrabold">Skills</span>
           </div>
-          <div className="hidden lg:flex flex-col justify-start items-center py-5 w-full">
-            <div className="flex justify-between items-center py-5 w-full gap-10">
+          <div className="hidden w-full flex-col items-center justify-start py-5 lg:flex">
+            <div className="flex w-full items-center justify-between gap-10 py-5">
               <Skill name={SkillEnum.typescript} />
               <Skill name={SkillEnum.javascript} />
               <Skill name={SkillEnum.react} />
               <Skill name={SkillEnum.tailwindcss} />
               <Skill name={SkillEnum.figma} />
             </div>
-            <div className="flex justify-between items-center py-5 w-full gap-10">
+            <div className="flex w-full items-center justify-between gap-10 py-5">
               <Skill name={SkillEnum.git} />
               <Skill name={SkillEnum.nodejs} />
               <Skill name={SkillEnum.express} />
@@ -155,9 +155,9 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-start justify-start bg-black px-4 lg:px-20 lg:py-14 py-10">
+      <div className="flex flex-col items-start justify-start bg-black px-4 py-10 lg:flex-row lg:px-20 lg:py-14">
         <div className="flex flex-col items-center justify-center gap-5 lg:px-8">
-          <div className="flex items-center justify-center gap-4 py-5 display-text-m text-white lg:display-text">
+          <div className="display-text-m lg:display-text flex items-center justify-center gap-4 py-5 text-white">
             <span>My</span>
             <span className="font-extrabold">Experience</span>
           </div>
@@ -185,9 +185,9 @@ export default function IndexPage() {
       </div>
       <div
         id="about-me"
-        className="flex flex-col lg:flex-row lg:justify-center lg:items-center lg:px-20 lg:py-14 items-start justify-start px-4 py-10"
+        className="flex flex-col items-start justify-start px-4 py-10 lg:flex-row lg:items-center lg:justify-center lg:px-20 lg:py-14"
       >
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-16 items-center justify-start gap-5">
+        <div className="flex flex-col items-center justify-start gap-5 lg:flex-row lg:justify-between lg:gap-16">
           <Image
             alt=""
             src={"/boy2.png"}
@@ -203,7 +203,7 @@ export default function IndexPage() {
             className="hidden lg:block"
           />
           <div className="flex flex-col items-start justify-start gap-5 lg:w-[65%]">
-            <div className="flex w-full items-center justify-start gap-4 py-5 display-text-m text-black lg:display-text">
+            <div className="display-text-m lg:display-text flex w-full items-center justify-start gap-4 py-5 text-black">
               <span>About</span>
               <span className="font-extrabold">Me</span>
             </div>
@@ -241,7 +241,7 @@ export default function IndexPage() {
         className="flex flex-col items-start justify-start bg-black px-4 py-10 lg:px-20 lg:py-14"
       >
         <div className="flex flex-col items-start justify-start gap-5">
-          <div className="flex items-center justify-center gap-4 py-5 w-full display-text-m text-white lg:display-text">
+          <div className="display-text-m lg:display-text flex w-full items-center justify-center gap-4 py-5 text-white">
             <span>My</span>
             <span className="font-extrabold">Projects</span>
           </div>
@@ -263,13 +263,13 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row lg:px-20 lg:py-14 items-start justify-start px-4 py-10">
-        <div className="flex flex-col lg:justify-center lg:items-center items-start justify-start">
-          <div className="flex w-full items-center justify-center gap-4 py-5 display-text-m text-black lg:display-text">
+      <div className="flex flex-col items-start justify-start px-4 py-10 lg:flex-row lg:px-20 lg:py-14">
+        <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center">
+          <div className="display-text-m lg:display-text flex w-full items-center justify-center gap-4 py-5 text-black">
             <span>My</span>
             <span className="font-extrabold">Testimonials</span>
           </div>
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:px-6 lg:py-10 items-center justify-center gap-10 p-5">
+          <div className="flex flex-col items-center justify-center gap-10 p-5 lg:flex-row lg:justify-between lg:px-6 lg:py-10">
             {testimonials.map((testimonial, index) => (
               <Testimonial
                 key={index}
@@ -286,12 +286,12 @@ export default function IndexPage() {
         id="contact-me"
         className="flex flex-col items-start justify-start px-4 py-10 lg:px-12 lg:py-14"
       >
-        <div className="flex flex-col lg:justify-center lg:items-center items-start justify-start">
-          <div className="flex w-full items-center justify-center gap-4 py-5 display-text-m text-black lg:display-text">
+        <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center">
+          <div className="display-text-m lg:display-text flex w-full items-center justify-center gap-4 py-5 text-black">
             <span>Contact</span>
             <span className="font-extrabold">Me</span>
           </div>
-          <div className="flex flex-col items-start justify-start lg:flex-row lg:justify-between lg:gap-20 lg:items-center lg:px-8">
+          <div className="flex flex-col items-start justify-start lg:flex-row lg:items-center lg:justify-between lg:gap-20 lg:px-8">
             <div className="flex w-full flex-col items-start justify-center gap-5 py-5">
               <Input
                 type="text"
@@ -377,7 +377,7 @@ export default function IndexPage() {
                 I seek to push the limits of creativity to create high-engaging,
                 user-friendly, and memorable interactive experiences.
               </div>
-              <div className="heading5 lg:heading3 flex flex-col items-start justify-center gap-3 font-bold lg:font-semibold text-black">
+              <div className="heading5 lg:heading3 flex flex-col items-start justify-center gap-3 font-bold text-black lg:font-semibold">
                 <div>vivienogoun1@gmail.com</div>
                 <div>9876543210</div>
               </div>
