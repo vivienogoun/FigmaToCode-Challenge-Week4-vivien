@@ -37,7 +37,7 @@ export function SiteHeader() {
             <div className="flex items-center justify-center md:hidden">
               <DropdownMenu>
                 <DropdownMenuTrigger className="focus-visible:outline-none">
-                  <Icons.menu className="size-7" />
+                  <Icons.menu className="mr-2 size-7 text-foreground" />
                   <span className="sr-only">Menu</span>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
@@ -61,9 +61,12 @@ export function SiteHeader() {
                     <span className="button-text mr-2 font-semibold">
                       Resume
                     </span>
-                    <Icons.download className="hidden group-active:inline" />
                     <Icons.download
-                      hover
+                      hover={theme == "dark" ? true : false}
+                      className="hidden group-active:inline"
+                    />
+                    <Icons.download
+                      hover={theme == "dark" ? false : true}
                       className="inline group-active:hidden"
                     />
                   </Button>

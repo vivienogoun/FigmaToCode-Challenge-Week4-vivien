@@ -595,7 +595,7 @@ export const Icons = {
     >
       <path
         d="M0.5 10V8.33333H15.5V10H0.5ZM0.5 5.83333V4.16667H15.5V5.83333H0.5ZM0.5 1.66667V0H15.5V1.66667H0.5Z"
-        fill="black"
+        fill="currentColor"
       />
     </svg>
   ),
