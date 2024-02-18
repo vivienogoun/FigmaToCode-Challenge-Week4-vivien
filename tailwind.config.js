@@ -2,7 +2,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // darkMode: ["class"],
+  darkMode: ["class"],
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     container: {
@@ -15,7 +15,6 @@ module.exports = {
     extend: {
       colors: {
         black: "#000",
-        neutral: "#404040",
         white: "#fff",
         zinc: {
           100: "#f4f4f5",
@@ -26,11 +25,13 @@ module.exports = {
         },
         error: "#ef4444",
 
+        background: "rgb(var(--background))",
+        foreground: "rgb(var(--foreground))",
+        neutral: "rgb(var(--neutral))",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

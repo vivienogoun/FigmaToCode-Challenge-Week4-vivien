@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useTheme } from "next-themes"
 
 import { ProjectType } from "@/types/project"
 import { defaultIconStyle, hoverIconStyle } from "@/lib/constants"
@@ -18,6 +19,7 @@ const Project = ({
   link,
   reverse,
 }: ProjectProps) => {
+  const { theme } = useTheme()
   return (
     <div
       className={`flex flex-col ${
@@ -39,14 +41,19 @@ const Project = ({
         className="hidden w-1/2 rounded-xl lg:block"
       />
       <div className="flex flex-col items-start justify-center gap-7 lg:w-1/2">
-        <div className="heading4 lg:display-text font-extrabold text-white">
+        <div className="heading4 lg:display-text font-extrabold text-background">
           0{num}
         </div>
-        <div className="heading5 lg:heading2 font-extrabold text-white">
+        <div className="heading5 lg:heading2 font-extrabold text-background">
           {title}
         </div>
         <div className="paragraph2 text-zinc-500">{description}</div>
-        <Link href={link} target="_blank" rel="noreferrer" className="group">
+        <Link
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          className="group text-background"
+        >
           <Icons.external className={defaultIconStyle} />
           <Icons.external hover className={hoverIconStyle} />
         </Link>

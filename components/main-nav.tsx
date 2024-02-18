@@ -14,7 +14,7 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex w-2/3 justify-between gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
-        <Logo color="black" />
+        <Logo from="header" />
       </Link>
       {items?.length ? (
         <nav className="hidden gap-6 md:flex">
@@ -25,7 +25,7 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "heading5 flex items-center font-semibold text-black hover:text-neutral hover:underline",
+                    "heading5 flex items-center font-semibold text-foreground hover:text-neutral hover:underline",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >

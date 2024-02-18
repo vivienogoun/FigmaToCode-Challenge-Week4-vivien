@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useTheme } from "next-themes"
 
 import { SkillEnum } from "@/types/skill"
 import { defaultIconStyle, hoverIconStyle } from "@/lib/constants"
@@ -10,59 +11,122 @@ interface SkillProps {
 }
 
 const Skill = ({ name }: SkillProps) => {
+  const { theme, setTheme } = useTheme()
   return (
-    <div className="group inline-flex w-1/2 flex-col items-center justify-center gap-8 rounded-[4px] border border-black p-6 text-black hover:bg-black hover:text-white">
+    <div
+      className={`group inline-flex w-1/2 flex-col items-center justify-center gap-8 rounded-[4px] border border-foreground p-6 text-foreground hover:bg-foreground hover:text-background`}
+    >
       {name === SkillEnum.typescript ? (
         <>
-          <Icons.typescript className={defaultIconStyle} />
-          <Icons.typescript hover className={hoverIconStyle} />
+          <Icons.typescript
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.typescript
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
       ) : name === SkillEnum.express ? (
         <>
-          <Icons.express className={defaultIconStyle} />
-          <Icons.express hover className={hoverIconStyle} />
+          <Icons.express
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.express
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
       ) : name === SkillEnum.figma ? (
         <>
-          <Icons.figma className={defaultIconStyle} />
-          <Icons.figma hover className={hoverIconStyle} />
+          <Icons.figma
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.figma
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
       ) : name === SkillEnum.git ? (
         <>
-          <Icons.git className={defaultIconStyle} />
-          <Icons.git hover className={hoverIconStyle} />
+          <Icons.git
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.git
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
       ) : name === SkillEnum.javascript ? (
         <>
-          <Icons.javascript className={defaultIconStyle} />
-          <Icons.javascript hover className={hoverIconStyle} />
+          <Icons.javascript
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.javascript
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
       ) : name === SkillEnum.mongodb ? (
         <>
-          <Icons.mongodb className={defaultIconStyle} />
-          <Icons.mongodb hover className={hoverIconStyle} />
+          <Icons.mongodb
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.mongodb
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
       ) : name === SkillEnum.sass ? (
         <>
-          <Icons.sass className={defaultIconStyle} />
-          <Icons.sass hover className={hoverIconStyle} />
+          <Icons.sass
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.sass
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
       ) : name === SkillEnum.nodejs ? (
         <>
-          <Icons.nodejs className={defaultIconStyle} />
-          <Icons.nodejs hover className={hoverIconStyle} />
+          <Icons.nodejs
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.nodejs
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
       ) : name === SkillEnum.react ? (
         <>
-          <Icons.react className={defaultIconStyle} />
-          <Icons.react hover className={hoverIconStyle} />
+          <Icons.react
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.react
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
-      ) : (
+      ) : name === SkillEnum.tailwindcss ? (
         <>
-          <Icons.tailwindcss className={defaultIconStyle} />
-          <Icons.tailwindcss hover className={hoverIconStyle} />
+          <Icons.tailwindcss
+            hover={theme == "dark" ? true : false}
+            className={defaultIconStyle}
+          />
+          <Icons.tailwindcss
+            hover={theme == "light" ? true : false}
+            className={hoverIconStyle}
+          />
         </>
-      )}
+      ) : null}
       <span className="heading5 text-center font-bold capitalize">{name}</span>
     </div>
   )

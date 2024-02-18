@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useTheme } from "next-themes"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -12,20 +13,26 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
-
-// import { ThemeToggle } from "@/components/theme-toggle"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
+  const { theme } = useTheme()
   return (
-    <header className="sticky top-0 z-40 w-full bg-white">
+    <header className="sticky top-0 z-40 w-full bg-background">
       <div className="container flex h-16 items-center space-x-4 md:justify-between md:space-x-0">
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
             <Button className="group hidden md:flex">
               <span className="button-text mr-2 font-semibold">Resume</span>
-              <Icons.download className="hidden group-active:inline" />
-              <Icons.download hover className="inline group-active:hidden" />
+              <Icons.download
+                hover={theme == "dark" ? true : false}
+                className="hidden group-active:inline"
+              />
+              <Icons.download
+                hover={theme == "light" ? true : false}
+                className="inline group-active:hidden"
+              />
             </Button>
             <div className="flex items-center justify-center md:hidden">
               <DropdownMenu>
@@ -42,7 +49,7 @@ export function SiteHeader() {
                             key={index}
                             href={item.href}
                             className={cn(
-                              "heading5 flex items-center font-semibold text-black hover:text-neutral hover:underline"
+                              "heading5 flex items-center font-semibold text-foreground hover:text-neutral hover:underline"
                             )}
                           >
                             {item.title}
@@ -63,8 +70,7 @@ export function SiteHeader() {
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
-
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
           </nav>
         </div>
       </div>

@@ -90,21 +90,26 @@
 
 @layer utilities {
   .outlined {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000;
-    color: white;
+    text-shadow: -1px -1px 0 rgb(var(--foreground)),
+      1px -1px 0 rgb(var(--foreground)), -1px 1px 0 rgb(var(--foreground)),
+      1px 1px 0 rgb(var(--foreground));
+    color: rgb(var(--background));
+  }
+
+  @media (prefers-color-scheme: dark) {
   }
 
   .testimonial-shadow {
-    box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.2),
-      0px 8px 16px -6px rgba(24, 39, 75, 0.16);
+    box-shadow: 0px 3px 4px -3px rgb(var(--foreground)),
+      0px 4px 8px -3px rgb(var(--foreground));
   }
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --background: 255 255 255;
+    --foreground: 0 0 0;
+    --neutral: 64 64 64;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -136,8 +141,9 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+    --background: 0 0 0;
+    --foreground: 255 255 255;
+    --neutral: 191 191 191;
 
     --muted: 223 47% 11%;
     --muted-foreground: 215.4 16.3% 56.9%;
@@ -177,8 +183,4 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-}
-
-#radix- {
-  border: #000;
 }

@@ -57,21 +57,21 @@ export const Icons = {
     >
       <path
         d="M10.8335 9.16671L17.6668 2.33337"
-        stroke={`${hover ? "#bfbfbf" : "white"}`}
+        stroke={`${hover ? "#bfbfbf" : "currentColor"}`}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M18.3335 5.66663V1.66663H14.3335"
-        stroke={`${hover ? "#a7a7a4" : "#e7e7e4"}`}
+        stroke={`${hover ? "#a7a7a4" : "#a7a7a4"}`}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M9.1665 1.66663H7.49984C3.33317 1.66663 1.6665 3.33329 1.6665 7.49996V12.5C1.6665 16.6666 3.33317 18.3333 7.49984 18.3333H12.4998C16.6665 18.3333 18.3332 16.6666 18.3332 12.5V10.8333"
-        stroke={`${hover ? "#bfbfbf" : "white"}`}
+        stroke={`${hover ? "#bfbfbf" : "currentColor"}`}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useTheme } from "next-themes"
 
 import { defaultIconStyle, hoverIconStyle } from "@/lib/constants"
 
@@ -17,27 +18,52 @@ enum SocialEnum {
 }
 
 const SocialButton = ({ social }: SocialButtonProps) => {
+  const { theme } = useTheme()
   return (
     <Button variant={"outline"} size={"smIcon"} className="group">
       {social === SocialEnum.facebook ? (
         <>
-          <Icons.facebook className={hoverIconStyle} />
-          <Icons.facebook hover className={defaultIconStyle} />
+          <Icons.facebook
+            hover={theme == "dark" ? true : false}
+            className={hoverIconStyle}
+          />
+          <Icons.facebook
+            hover={theme == "light" ? true : false}
+            className={defaultIconStyle}
+          />
         </>
       ) : social === SocialEnum.reddit ? (
         <>
-          <Icons.reddit className={hoverIconStyle} />
-          <Icons.reddit hover className={defaultIconStyle} />
+          <Icons.reddit
+            hover={theme == "dark" ? true : false}
+            className={hoverIconStyle}
+          />
+          <Icons.reddit
+            hover={theme == "light" ? true : false}
+            className={defaultIconStyle}
+          />
         </>
       ) : social === SocialEnum.discord ? (
         <>
-          <Icons.discord className={hoverIconStyle} />
-          <Icons.discord hover className={defaultIconStyle} />
+          <Icons.discord
+            hover={theme == "dark" ? true : false}
+            className={hoverIconStyle}
+          />
+          <Icons.discord
+            hover={theme == "light" ? true : false}
+            className={defaultIconStyle}
+          />
         </>
       ) : (
         <>
-          <Icons.twitter className={hoverIconStyle} />
-          <Icons.twitter hover className={defaultIconStyle} />
+          <Icons.twitter
+            hover={theme == "dark" ? true : false}
+            className={hoverIconStyle}
+          />
+          <Icons.twitter
+            hover={theme == "light" ? true : false}
+            className={defaultIconStyle}
+          />
         </>
       )}
     </Button>
