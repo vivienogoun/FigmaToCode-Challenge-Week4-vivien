@@ -101,11 +101,6 @@
     margin-right: auto;
     max-width: 1400px;
   }
-
-  .testimonial-shadow {
-    box-shadow: 0px 3px 4px -3px rgb(var(--foreground)),
-      0px 4px 8px -3px rgb(var(--foreground));
-  }
 }
 
 @layer base {

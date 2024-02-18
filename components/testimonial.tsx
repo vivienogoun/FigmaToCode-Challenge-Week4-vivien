@@ -1,12 +1,25 @@
 import Image from "next/image"
+import { useTheme } from "next-themes"
 
 import { TestimonialType } from "@/types/testimonial"
 
 import { Icons } from "./icons"
 
 const Testimonial = ({ image, content, name, role }: TestimonialType) => {
+  const { theme } = useTheme()
   return (
-    <div className="testimonial-shadow group flex flex-col items-center justify-center gap-6 rounded-[20px] bg-background p-10 hover:bg-foreground">
+    <div
+      style={{
+        boxShadow: `${
+          theme == "dark"
+            ? `0px 6px 8px -6px rgba(231, 216, 180, 0.32),
+        0px 8px 16px -6px rgba(231, 216, 180, 0.24)`
+            : `0px 6px 8px -6px rgba(24, 39, 75, 0.16),
+      0px 8px 16px -6px rgba(24, 39, 75, 0.12)`
+        }`,
+      }}
+      className="group flex flex-col items-center justify-center gap-6 rounded-[20px] bg-background p-10 hover:bg-foreground"
+    >
       <div className="relative">
         <Image alt="" src={image} width={96} height={96} />
         <Icons.quote className="absolute bottom-0 right-0 inline group-hover:hidden" />
