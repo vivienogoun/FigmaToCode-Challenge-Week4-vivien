@@ -172,7 +172,7 @@ export default function IndexPage() {
         </div>
       </div>
       <div className="flex flex-col items-start justify-start bg-foreground px-4 py-10 lg:flex-row lg:px-20 lg:py-14">
-        <div className="flex flex-col items-center justify-center gap-5 lg:px-8">
+        <div className="lg:centered flex flex-col items-center justify-center gap-5 lg:px-20">
           <div className="display-text-m lg:display-text flex items-center justify-center gap-4 py-5 text-background">
             <span>My</span>
             <span className="font-extrabold">Experience</span>
@@ -260,7 +260,7 @@ export default function IndexPage() {
         id="projects"
         className="flex flex-col items-start justify-start bg-foreground px-4 py-10 lg:px-20 lg:py-14"
       >
-        <div className="flex flex-col items-start justify-start gap-5">
+        <div className="lg:centered flex flex-col items-start justify-start gap-5 lg:px-20">
           <div className="display-text-m lg:display-text flex w-full items-center justify-center gap-4 py-5 text-background">
             <span>My</span>
             <span className="font-extrabold">Projects</span>
