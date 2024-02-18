@@ -26,8 +26,8 @@ const projects: ProjectType[] = [
     description:
       "I'm Vivien Ogoun. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
     image: {
-      desktop: "/boy2.png",
-      mobile: "/boy2.png",
+      desktop: "/portfolio-desktop.png",
+      mobile: "/portfolio-mobile.jpeg",
     },
     link: "#",
     title: "Illustration Based Portfolio Website",

@@ -29,7 +29,7 @@ const Project = ({
         src={image.mobile}
         width={343}
         height={398}
-        className="block w-full rounded-xl lg:hidden"
+        className="block h-[600px] w-full rounded-xl lg:hidden"
       />
       <Image
         alt=""
@@ -38,7 +38,7 @@ const Project = ({
         height={476}
         className="hidden w-1/2 rounded-xl lg:block"
       />
-      <div className="flex w-1/2 flex-col items-start justify-center gap-7">
+      <div className="flex flex-col items-start justify-center gap-7 lg:w-1/2">
         <div className="heading4 lg:display-text font-extrabold text-white">
           0{num}
         </div>

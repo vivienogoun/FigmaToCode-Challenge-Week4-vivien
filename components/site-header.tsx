@@ -29,7 +29,7 @@ export function SiteHeader() {
             </Button>
             <div className="flex items-center justify-center md:hidden">
               <DropdownMenu>
-                <DropdownMenuTrigger>
+                <DropdownMenuTrigger className="focus-visible:outline-none">
                   <Icons.menu className="size-7" />
                   <span className="sr-only">Menu</span>
                 </DropdownMenuTrigger>

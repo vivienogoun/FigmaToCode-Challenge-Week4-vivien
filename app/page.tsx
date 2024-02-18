@@ -58,6 +58,7 @@ export default function IndexPage() {
           <Image
             alt=""
             src={"/boy.png"}
+            priority
             width={343}
             height={332}
             className="block md:hidden"
@@ -65,6 +66,7 @@ export default function IndexPage() {
           <Image
             alt=""
             src={"/boy-desktop-md.png"}
+            priority
             width={497}
             height={596}
             className="hidden md:block xl:hidden"
@@ -72,6 +74,7 @@ export default function IndexPage() {
           <Image
             alt=""
             src={"/boy-desktop-c.png"}
+            priority
             width={608}
             height={596}
             className="hidden xl:block"
