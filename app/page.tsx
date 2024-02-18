@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import { useTheme } from "next-themes"
 
@@ -18,7 +18,14 @@ import { Testimonial } from "@/components/testimonial"
 
 export default function IndexPage() {
   // const isDesktop = useMediaQuery("(min-width: 1024px)")
-  const { theme } = useTheme()
+  const { theme, setTheme } = useTheme()
+  useEffect(() => {
+    setTheme(
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+    )
+  }, [setTheme])
   const [formdata, setFormdata] = useState({
     fullname: "",
     email: "",
@@ -100,7 +107,11 @@ export default function IndexPage() {
                 <span className="font-extrabold">Benin.</span>
               </div>
             </div>
-            <div className="paragraph2 text-zinc-500">
+            <div
+              className={`paragraph2 ${
+                theme == "dark" ? "text-zinc-300" : "text-zinc-500"
+              }`}
+            >
               I&apos;m Vivien Ogoun. Lorem Ipsum is simply dummy text of the
               printing and typesetting industry. Lorem Ipsum has been the
               industry&apos;s standard dummy text ever since the 1500s, when an
