@@ -11,13 +11,13 @@ interface SkillProps {
 }
 
 const Skill = ({ name }: SkillProps) => {
-  const { theme, setTheme } = useTheme()
+  const { theme } = useTheme()
   return (
     <div
-      className={`group inline-flex w-1/2 flex-col items-center justify-center gap-8 rounded-[4px] border border-foreground p-6 text-foreground hover:bg-foreground hover:text-background`}
+      className={`group inline-flex w-1/2 flex-col items-center justify-center gap-8 rounded-[4px] border border-foreground p-6 text-foreground transition delay-150 duration-300 ease-in-out hover:bg-foreground hover:text-background md:hover:scale-125`}
     >
       {name === SkillEnum.typescript ? (
-        <>
+        <div>
           <Icons.typescript
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
@@ -26,9 +26,9 @@ const Skill = ({ name }: SkillProps) => {
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       ) : name === SkillEnum.express ? (
-        <>
+        <div>
           <Icons.express
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
@@ -37,9 +37,9 @@ const Skill = ({ name }: SkillProps) => {
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       ) : name === SkillEnum.figma ? (
-        <>
+        <div>
           <Icons.figma
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
@@ -48,9 +48,9 @@ const Skill = ({ name }: SkillProps) => {
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       ) : name === SkillEnum.git ? (
-        <>
+        <div>
           <Icons.git
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
@@ -59,9 +59,9 @@ const Skill = ({ name }: SkillProps) => {
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       ) : name === SkillEnum.javascript ? (
-        <>
+        <div>
           <Icons.javascript
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
@@ -70,9 +70,9 @@ const Skill = ({ name }: SkillProps) => {
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       ) : name === SkillEnum.mongodb ? (
-        <>
+        <div>
           <Icons.mongodb
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
@@ -81,20 +81,20 @@ const Skill = ({ name }: SkillProps) => {
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       ) : name === SkillEnum.sass ? (
-        <>
+        <div>
           <Icons.sass
             hover={theme == "dark" ? true : false}
-            className={defaultIconStyle}
+            className={`${defaultIconStyle}`}
           />
           <Icons.sass
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       ) : name === SkillEnum.nodejs ? (
-        <>
+        <div>
           <Icons.nodejs
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
@@ -103,20 +103,20 @@ const Skill = ({ name }: SkillProps) => {
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       ) : name === SkillEnum.react ? (
-        <>
+        <div>
           <Icons.react
             hover={theme == "dark" ? true : false}
-            className={defaultIconStyle}
+            className={`${defaultIconStyle}`}
           />
           <Icons.react
             hover={theme == "dark" ? false : true}
-            className={hoverIconStyle}
+            className={`${hoverIconStyle}`}
           />
-        </>
+        </div>
       ) : (
-        <>
+        <div>
           <Icons.socket
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
@@ -125,7 +125,7 @@ const Skill = ({ name }: SkillProps) => {
             hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
-        </>
+        </div>
       )}
       <span className="heading5 text-center font-bold capitalize">{name}</span>
     </div>

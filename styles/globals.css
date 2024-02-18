@@ -9,8 +9,14 @@
     letter-spacing: -2%;
   }
 
+  .display-text-lg {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -2%;
+  }
+
   .display-text-m {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 32px;
     letter-spacing: -2%;
   }
@@ -85,6 +91,40 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 2%;
+  }
+
+  .typingtext::before {
+    content: "";
+    right: -8px;
+    top: 50%;
+    position: absolute;
+    height: 30px;
+    width: 4px;
+    background: rgb(var(--foreground));
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .typingtext::before {
+      height: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .typingtext::before {
+      height: 50px;
+    }
+  }
+
+  .typingtext.stop-blinking::before {
+    animation: none;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
   }
 }
 

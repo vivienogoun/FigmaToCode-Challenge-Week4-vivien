@@ -4,7 +4,7 @@ import Link from "next/link"
 import { NavItem } from "@/types/nav"
 import { cn } from "@/lib/utils"
 
-import { Logo } from "./logo"
+import { Logo } from "../logo"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -17,7 +17,7 @@ export function MainNav({ items }: MainNavProps) {
         <Logo from="header" />
       </Link>
       {items?.length ? (
-        <nav className="hidden gap-6 md:flex">
+        <nav className="hidden gap-6 lg:flex">
           {items?.map(
             (item, index) =>
               item.href && (

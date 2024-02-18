@@ -12,18 +12,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Icons } from "@/components/icons"
-import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
+
+import { MainNav } from "./main-nav"
 
 export function SiteHeader() {
   const { theme } = useTheme()
   return (
     <header className="sticky top-0 z-40 w-full bg-background">
-      <div className="lg:centered flex h-16 items-center space-x-4 md:justify-between md:space-x-0 lg:px-10">
+      <div className="md:centered flex h-16 items-center space-x-4 md:justify-between md:space-x-0 md:px-10">
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
-            <Button className="group hidden md:flex">
+            <Button className="group hidden lg:flex">
               <span className="button-text mr-2 font-semibold">Resume</span>
               <Icons.download
                 hover={theme == "dark" ? true : false}
@@ -34,7 +35,7 @@ export function SiteHeader() {
                 className="inline group-active:hidden"
               />
             </Button>
-            <div className="flex items-center justify-center md:hidden">
+            <div className="flex items-center justify-center lg:hidden">
               <DropdownMenu>
                 <DropdownMenuTrigger className="focus-visible:outline-none">
                   <Icons.menu className="mr-2 size-7 text-foreground" />

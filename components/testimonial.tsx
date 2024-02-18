@@ -18,7 +18,7 @@ const Testimonial = ({ image, content, name, role }: TestimonialType) => {
       0px 8px 16px -6px rgba(24, 39, 75, 0.12)`
         }`,
       }}
-      className="group flex flex-col items-center justify-center gap-6 rounded-[20px] bg-background p-10 hover:bg-foreground"
+      className="group flex flex-col items-center justify-center gap-6 rounded-[20px] bg-background p-10 transition delay-150 duration-300 ease-in-out hover:bg-foreground lg:hover:scale-110"
     >
       <div className="relative">
         <Image alt="" src={image} width={96} height={96} />
