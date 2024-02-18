@@ -9,7 +9,7 @@ const textareaVariants = cva(
     variants: {
       variant: {
         default:
-          "border-zinc-500 text-foreground placeholder:border-black placeholder:text-zinc-500 hover:text-neutral focus-visible:border-neutral focus-visible:text-neutral",
+          "border-zinc-500 text-foreground placeholder:border-black placeholder:text-zinc-500 hover:bg-zinc-100 hover:border-neutral hover:text-neutral focus-visible:border-neutral focus-visible:text-neutral",
         error: "border-error text-error placeholder:text-error",
       },
     },

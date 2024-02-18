@@ -96,7 +96,10 @@
     color: rgb(var(--background));
   }
 
-  @media (prefers-color-scheme: dark) {
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
   }
 
   .testimonial-shadow {

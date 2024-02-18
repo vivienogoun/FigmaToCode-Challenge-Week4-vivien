@@ -37,8 +37,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            sora.variable
+            "min-h-screen bg-background antialiased",
+            sora.className
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

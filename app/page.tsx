@@ -61,8 +61,8 @@ export default function IndexPage() {
   }
 
   return (
-    <section className="container grid items-center gap-6 px-0 pb-8 pt-6 md:py-10">
-      <div className="flex flex-col items-start justify-start px-4 py-10 md:flex-row md:py-14">
+    <section className="grid items-center gap-6 px-0 pb-8 pt-6 md:py-10">
+      <div className="lg:centered flex flex-col items-start justify-start px-4 py-10 md:flex-row md:py-14">
         <div className="flex flex-col items-start justify-start gap-12 md:relative md:flex-row-reverse md:items-center md:justify-between md:px-8">
           <Image
             alt=""
@@ -78,7 +78,7 @@ export default function IndexPage() {
             priority
             width={497}
             height={596}
-            className="hidden md:block xl:hidden"
+            className="hidden grow md:block xl:hidden"
           />
           <Image
             alt=""
@@ -86,9 +86,9 @@ export default function IndexPage() {
             priority
             width={608}
             height={596}
-            className="hidden xl:block"
+            className="hidden grow xl:block"
           />
-          <div className="flex flex-col items-start justify-start gap-8 md:gap-20 md:py-5">
+          <div className="flex flex-col items-start justify-start gap-8 md:w-1/2 md:gap-20 md:py-5">
             <div className="flex flex-col items-start justify-start gap-3 md:gap-5">
               <div className="display-text-m xl:display-text flex items-start justify-start gap-4 text-foreground">
                 <span>Hello I&apos;am</span>
@@ -124,7 +124,7 @@ export default function IndexPage() {
       </div>
       <div
         id="skills"
-        className="flex flex-col items-start justify-start px-4 py-10 lg:items-center lg:justify-center lg:px-12 lg:py-14"
+        className={`lg:centered flex flex-col items-start justify-start px-4 py-10 lg:w-full lg:items-center lg:justify-center lg:px-12 lg:py-14`}
       >
         <div className="flex w-full flex-col items-start justify-start gap-5">
           <div className="display-text-m lg:display-text flex w-full items-center justify-center gap-4 py-5 text-foreground">
@@ -201,7 +201,7 @@ export default function IndexPage() {
       </div>
       <div
         id="about-me"
-        className="flex flex-col items-start justify-start px-4 py-10 lg:flex-row lg:items-center lg:justify-center lg:px-20 lg:py-14"
+        className="lg:centered flex flex-col items-start justify-start px-4 py-10 lg:flex-row lg:items-center lg:justify-center lg:px-20 lg:py-14"
       >
         <div className="flex flex-col items-center justify-start gap-5 lg:flex-row lg:justify-between lg:gap-16">
           <Image
@@ -283,7 +283,7 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start justify-start px-4 py-10 lg:flex-row lg:px-20 lg:py-14">
+      <div className="lg:centered flex flex-col items-start justify-start px-4 py-10 lg:flex-row lg:px-20 lg:py-14">
         <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center">
           <div className="display-text-m lg:display-text flex w-full items-center justify-center gap-4 py-5 text-foreground">
             <span>My</span>
@@ -304,7 +304,7 @@ export default function IndexPage() {
       </div>
       <div
         id="contact-me"
-        className="flex flex-col items-start justify-start px-4 py-10 lg:px-12 lg:py-14"
+        className="lg:centered flex flex-col items-start justify-start px-4 py-10 lg:px-12 lg:py-14"
       >
         <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center">
           <div className="display-text-m lg:display-text flex w-full items-center justify-center gap-4 py-5 text-foreground">

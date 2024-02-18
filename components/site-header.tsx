@@ -19,7 +19,7 @@ export function SiteHeader() {
   const { theme } = useTheme()
   return (
     <header className="sticky top-0 z-40 w-full bg-background">
-      <div className="container flex h-16 items-center space-x-4 md:justify-between md:space-x-0">
+      <div className="lg:centered flex h-16 items-center space-x-4 md:justify-between md:space-x-0">
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
