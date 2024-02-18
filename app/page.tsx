@@ -125,15 +125,15 @@ export default function IndexPage() {
               <Skill name={SkillEnum.typescript} />
               <Skill name={SkillEnum.javascript} />
               <Skill name={SkillEnum.react} />
-              <Skill name={SkillEnum.tailwindcss} />
+              <Skill name={SkillEnum.nodejs} />
               <Skill name={SkillEnum.figma} />
             </div>
             <div className="flex w-full items-center justify-between gap-10 py-5">
               <Skill name={SkillEnum.git} />
-              <Skill name={SkillEnum.nodejs} />
               <Skill name={SkillEnum.express} />
               <Skill name={SkillEnum.sass} />
               <Skill name={SkillEnum.mongodb} />
+              <Skill name={SkillEnum.socket} />
             </div>
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-5 lg:hidden">
@@ -143,19 +143,19 @@ export default function IndexPage() {
             </div>
             <div className="flex w-full items-center justify-center gap-5">
               <Skill name={SkillEnum.react} />
-              <Skill name={SkillEnum.tailwindcss} />
+              <Skill name={SkillEnum.nodejs} />
             </div>
             <div className="flex w-full items-center justify-center gap-5">
               <Skill name={SkillEnum.figma} />
               <Skill name={SkillEnum.git} />
             </div>
             <div className="flex w-full items-center justify-center gap-5">
-              <Skill name={SkillEnum.nodejs} />
               <Skill name={SkillEnum.express} />
+              <Skill name={SkillEnum.sass} />
             </div>
             <div className="flex w-full items-center justify-center gap-5">
-              <Skill name={SkillEnum.sass} />
               <Skill name={SkillEnum.mongodb} />
+              <Skill name={SkillEnum.socket} />
             </div>
           </div>
         </div>

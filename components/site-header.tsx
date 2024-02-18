@@ -30,7 +30,7 @@ export function SiteHeader() {
                 className="hidden group-active:inline"
               />
               <Icons.download
-                hover={theme == "light" ? true : false}
+                hover={theme == "dark" ? false : true}
                 className="inline group-active:hidden"
               />
             </Button>

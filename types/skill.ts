@@ -1,13 +1,12 @@
 export enum SkillEnum {
   typescript = "typescript",
   javascript = "javascript",
-  nextjs = "nextjs",
-  tailwindcss = "tailwindcss",
+  socket = "socket.io",
   figma = "figma",
   git = "git",
   react = "react",
   mongodb = "mongodb",
   nodejs = "nodejs",
   express = "express",
-  sass = "sass",
+  sass = "sass/scss",
 }

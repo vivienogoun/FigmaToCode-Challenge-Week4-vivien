@@ -23,7 +23,7 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.typescript
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
@@ -34,7 +34,7 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.express
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
@@ -45,7 +45,7 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.figma
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
@@ -56,7 +56,7 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.git
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
@@ -67,7 +67,7 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.javascript
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
@@ -78,7 +78,7 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.mongodb
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
@@ -89,7 +89,7 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.sass
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
@@ -100,7 +100,7 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.nodejs
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
@@ -111,22 +111,22 @@ const Skill = ({ name }: SkillProps) => {
             className={defaultIconStyle}
           />
           <Icons.react
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
-      ) : name === SkillEnum.tailwindcss ? (
+      ) : (
         <>
-          <Icons.tailwindcss
+          <Icons.socket
             hover={theme == "dark" ? true : false}
             className={defaultIconStyle}
           />
-          <Icons.tailwindcss
-            hover={theme == "light" ? true : false}
+          <Icons.socket
+            hover={theme == "dark" ? false : true}
             className={hoverIconStyle}
           />
         </>
-      ) : null}
+      )}
       <span className="heading5 text-center font-bold capitalize">{name}</span>
     </div>
   )

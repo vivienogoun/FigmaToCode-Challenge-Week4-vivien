@@ -28,7 +28,7 @@ const SocialButton = ({ social }: SocialButtonProps) => {
             className={hoverIconStyle}
           />
           <Icons.facebook
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={defaultIconStyle}
           />
         </>
@@ -39,7 +39,7 @@ const SocialButton = ({ social }: SocialButtonProps) => {
             className={hoverIconStyle}
           />
           <Icons.reddit
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={defaultIconStyle}
           />
         </>
@@ -50,7 +50,7 @@ const SocialButton = ({ social }: SocialButtonProps) => {
             className={hoverIconStyle}
           />
           <Icons.discord
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={defaultIconStyle}
           />
         </>
@@ -61,7 +61,7 @@ const SocialButton = ({ social }: SocialButtonProps) => {
             className={hoverIconStyle}
           />
           <Icons.twitter
-            hover={theme == "light" ? true : false}
+            hover={theme == "dark" ? false : true}
             className={defaultIconStyle}
           />
         </>
