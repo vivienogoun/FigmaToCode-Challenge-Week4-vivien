@@ -70,7 +70,7 @@ export const Hero = () => {
         <div className="flex flex-col items-start justify-start gap-8 md:gap-20 md:py-5">
           <div className="flex flex-col items-start justify-start gap-3 md:gap-5">
             <div className="display-text-m lg:display-text-lg xl:display-text flex items-start justify-start gap-4 text-foreground">
-              <span className="relative">Hello I&apos;am</span>
+              <span className="relative">Hello I&apos;m</span>
               <span className="font-extrabold ">Vivien Ogoun.</span>
             </div>
             <div className="flex items-start justify-start gap-4 font-extrabold">
