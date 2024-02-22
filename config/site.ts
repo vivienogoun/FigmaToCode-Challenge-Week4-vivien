@@ -1,6 +1,13 @@
-export type SiteConfig = typeof siteConfig
+type SiteConfig = {
+  name: string
+  description: string
+  mainNav: {
+    title: string
+    href: string
+  }[]
+}
 
-export const siteConfig = {
+export const siteConfig: SiteConfig = {
   name: "Personal",
   description: "Figma To Code Challenge Week 4 by Vivien Ogoun.",
   mainNav: [
