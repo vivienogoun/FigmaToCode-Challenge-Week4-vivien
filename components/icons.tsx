@@ -2,7 +2,6 @@ import {
   LucideProps,
   Moon,
   SunMedium,
-  Twitter,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -564,8 +563,7 @@ export const Icons = {
   ),
   sun: SunMedium,
   moon: Moon,
-  // twitter: Twitter,
-  logo: ({ hover, className }: HoverProp) => (
+  logo: ({ className }: HoverProp) => (
     <svg
       className={className}
       width="24"
