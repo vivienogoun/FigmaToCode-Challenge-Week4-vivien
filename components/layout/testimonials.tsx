@@ -1,4 +1,4 @@
-import { testimonials } from "@/lib/data"
+import { testimonials } from "@/utils/data"
 
 import { Testimonial } from "../testimonial"
 

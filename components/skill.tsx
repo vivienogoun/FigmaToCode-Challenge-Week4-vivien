@@ -1,8 +1,8 @@
 import * as React from "react"
+import { defaultIconStyle, hoverIconStyle } from "@/utils/constants"
 import { useTheme } from "next-themes"
 
 import { SkillEnum } from "@/types/skill"
-import { defaultIconStyle, hoverIconStyle } from "@/lib/constants"
 
 import { Icons } from "./icons"
 

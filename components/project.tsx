@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
+import { defaultIconStyle, hoverIconStyle } from "@/utils/constants"
 
 import { ProjectType } from "@/types/project"
-import { defaultIconStyle, hoverIconStyle } from "@/lib/constants"
 
 import { Icons } from "./icons"
 

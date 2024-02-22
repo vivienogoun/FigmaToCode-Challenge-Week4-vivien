@@ -1,4 +1,4 @@
-import { projects } from "@/lib/data"
+import { projects } from "@/utils/data"
 
 import { Project } from "../project"
 

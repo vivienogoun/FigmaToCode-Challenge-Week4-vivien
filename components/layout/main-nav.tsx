@@ -1,8 +1,8 @@
 import * as React from "react"
 import Link from "next/link"
+import { cn } from "@/utils/shadcn"
 
 import { NavItem } from "@/types/nav"
-import { cn } from "@/lib/utils"
 
 import { Logo } from "../logo"
 

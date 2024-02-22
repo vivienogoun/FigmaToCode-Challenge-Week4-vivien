@@ -1,7 +1,6 @@
 import * as React from "react"
+import { cn } from "@/utils/shadcn"
 import { cva, type VariantProps } from "class-variance-authority"
-
-import { cn } from "@/lib/utils"
 
 const inputVariants = cva(
   "flex h-10 w-full rounded-[4px] border px-3 py-2 bg-background heading6 file:border-0 file:bg-transparent file:text-sm file:font-medium  focus-visible:outline-none focus-visible:bg-background disabled:cursor-not-allowed disabled:bg-zinc-300 disabled:border-zinc-200 disabled:text-zinc-500",

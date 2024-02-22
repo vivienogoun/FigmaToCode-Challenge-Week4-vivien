@@ -1,9 +1,9 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import { sora } from "@/utils/fonts"
+import { cn } from "@/utils/shadcn"
 
 import { siteConfig } from "@/config/site"
-import { sora } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
 import { Footer } from "@/components/layout/footer"
 import { SiteHeader } from "@/components/layout/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"

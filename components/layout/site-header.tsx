@@ -1,10 +1,10 @@
 "use client"
 
 import Link from "next/link"
+import { cn } from "@/utils/shadcn"
 import { useTheme } from "next-themes"
 
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
