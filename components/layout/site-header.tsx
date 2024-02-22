@@ -43,20 +43,17 @@ export function SiteHeader() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <nav className="flex flex-col items-center gap-6 py-6">
-                    {siteConfig.mainNav?.map(
-                      (item, index) =>
-                        item.href && (
-                          <Link
-                            key={index}
-                            href={item.href}
-                            className={cn(
-                              "heading5 flex items-center font-semibold text-foreground hover:text-neutral hover:underline"
-                            )}
-                          >
-                            {item.title}
-                          </Link>
-                        )
-                    )}
+                    {siteConfig.mainNav?.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className={cn(
+                          "heading5 flex items-center font-semibold text-foreground hover:text-neutral hover:underline"
+                        )}
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
                   </nav>
                   <Button className="group mt-3">
                     <span className="button-text mr-2 font-semibold">
