@@ -1,20 +1,6 @@
-import {
-  JetBrains_Mono as FontMono,
-  Inter as FontSans,
-  Sora,
-} from "next/font/google"
+import { Sora } from "next/font/google"
 
 export const sora = Sora({
   subsets: ["latin"],
   variable: "--font-sora",
 })
-
-// export const fontSans = FontSans({
-//   subsets: ["latin"],
-//   variable: "--font-sans",
-// })
-
-// export const fontMono = FontMono({
-//   subsets: ["latin"],
-//   variable: "--font-mono",
-// })
