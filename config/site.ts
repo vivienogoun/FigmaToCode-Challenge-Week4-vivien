@@ -21,9 +21,4 @@ export const siteConfig = {
       href: "#contact-me",
     },
   ],
-  links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
-  },
 }
