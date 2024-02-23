@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { useTheme } from "next-themes"
 
@@ -8,6 +8,7 @@ import { SocialButtons } from "../social-buttons"
 
 export const Hero = () => {
   const { theme } = useTheme()
+  const timer = useRef<NodeJS.Timeout>()
 
   useEffect(() => {
     const roles = document.getElementById("roles")
@@ -26,20 +27,21 @@ export const Hero = () => {
       if (!isDeleting && charIndex < currentWord.length) {
         // type the next character
         charIndex++
-        setTimeout(typingRoles, 200)
+        timer.current = setTimeout(typingRoles, 200)
       } else if (isDeleting && charIndex > 0) {
         // remove the previous character
         charIndex--
-        setTimeout(typingRoles, 100)
+        timer.current = setTimeout(typingRoles, 100)
       } else {
         // if word is deleted switch to the next word
         isDeleting = !isDeleting
         roles?.classList.remove("stop-blinking")
         wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex
-        setTimeout(typingRoles, 1200)
+        timer.current = setTimeout(typingRoles, 1200)
       }
     }
     typingRoles()
+    return () => clearTimeout(timer.current)
   }, [])
 
   return (
@@ -71,11 +73,11 @@ export const Hero = () => {
         />
         <div className="flex flex-col items-start justify-start gap-8 md:gap-20 md:py-5">
           <div className="flex flex-col items-start justify-start gap-3 md:gap-5">
-            <div className="display-text-m lg:display-text-lg xl:display-text flex items-start justify-start gap-4 text-foreground">
+            <h1 className="display-text-m lg:display-text-lg xl:display-text flex items-start justify-start gap-4 text-foreground">
               <span className="relative">Hello I&apos;m</span>
               <span className="font-extrabold ">Vivien Ogoun.</span>
-            </div>
-            <div className="flex items-start justify-start gap-4 font-extrabold">
+            </h1>
+            <h2 className="flex items-start justify-start gap-4 font-extrabold">
               <span>
                 <span className="text-[1px]">.</span>
                 <span
@@ -86,13 +88,13 @@ export const Hero = () => {
               <span className="heading3 lg:display-text-lg xl:display-text outlined">
                 Developer
               </span>
-            </div>
-            <div className="display-text-m lg:display-text-lg xl:display-text flex items-start justify-start gap-4 text-foreground">
+            </h2>
+            <h2 className="display-text-m lg:display-text-lg xl:display-text flex items-start justify-start gap-4 text-foreground">
               <span>Based In</span>
               <span className="font-extrabold">Benin.</span>
-            </div>
+            </h2>
           </div>
-          <div
+          <p
             className={`paragraph2 md:mb-4 ${
               theme == "dark" ? "text-zinc-300" : "text-zinc-500"
             }`}
@@ -102,7 +104,7 @@ export const Hero = () => {
             industry&apos;s standard dummy text ever since the 1500s, when an
             unknown printer took a galley of type and scrambled it to specimen
             book.
-          </div>
+          </p>
           <SocialButtons className="-bottom-6 md:absolute md:gap-8" />
         </div>
       </div>

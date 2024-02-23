@@ -33,13 +33,13 @@ const Experience = ({ image, title, period, description }: ExperienceProps) => {
           {period}
         </span>
       </div>
-      <div
+      <p
         className={`paragraph2 ${
           theme == "dark" ? "text-zinc-800" : "text-zinc-300"
         }`}
       >
         {description}
-      </div>
+      </p>
     </div>
   )
 }

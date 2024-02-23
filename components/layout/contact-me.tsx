@@ -49,10 +49,10 @@ export function ContactMe() {
       className="md:centered flex flex-col items-start justify-start px-4 py-10 md:px-12 md:py-14"
     >
       <div className="flex flex-col items-start justify-start md:items-center md:justify-center">
-        <div className="display-text-m md:display-text flex w-full items-center justify-center gap-4 py-5 text-foreground">
+        <h2 className="display-text-m md:display-text flex w-full items-center justify-center gap-4 py-5 text-foreground">
           <span>Contact</span>
           <span className="font-extrabold">Me</span>
-        </div>
+        </h2>
         <div className="flex flex-col items-start justify-start md:flex-row md:items-center md:justify-between md:gap-20 md:px-8">
           <div className="flex w-full flex-col items-start justify-center gap-5 py-5">
             <Input
@@ -108,9 +108,11 @@ export function ContactMe() {
             />
             <div className="flex w-full items-center justify-between">
               {disabled ? (
-                <Button onClick={handleReset}>Reset</Button>
+                <Button type="reset" onClick={handleReset}>
+                  Reset
+                </Button>
               ) : (
-                <Button onClick={handleClick} disabled={disabled}>
+                <Button type="submit" onClick={handleClick}>
                   Get In Touch
                 </Button>
               )}
@@ -135,14 +137,14 @@ export function ContactMe() {
                 Something special
               </div>
             </div>
-            <div
+            <p
               className={`paragraph2 ${
                 theme == "dark" ? "text-zinc-200" : "text-zinc-500"
               }`}
             >
               I seek to push the limits of creativity to create high-engaging,
               user-friendly, and memorable interactive experiences.
-            </div>
+            </p>
             <div className="heading5 md:heading3 flex flex-col items-start justify-center gap-3 font-bold text-foreground md:font-semibold">
               <div>vivienogoun1@gmail.com</div>
               <div>9876543210</div>

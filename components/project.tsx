@@ -45,7 +45,7 @@ const Project = ({
         <div className="heading5 md:heading2 font-extrabold text-background">
           {title}
         </div>
-        <div className="paragraph2 text-zinc-500">{description}</div>
+        <p className="paragraph2 text-zinc-500">{description}</p>
         <Link
           href={link}
           target="_blank"

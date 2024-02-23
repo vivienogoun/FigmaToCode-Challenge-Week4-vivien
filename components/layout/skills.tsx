@@ -9,10 +9,10 @@ export function Skills() {
       className={`md:centered flex flex-col items-start justify-start px-4 py-10 md:w-full md:items-center md:justify-center md:px-12 md:py-14`}
     >
       <div className="flex w-full flex-col items-start justify-start gap-5">
-        <div className="display-text-m md:display-text flex w-full items-center justify-center gap-4 py-5 text-foreground">
+        <h2 className="display-text-m md:display-text flex w-full items-center justify-center gap-4 py-5 text-foreground">
           <span>My</span>
           <span className="font-extrabold">Skills</span>
-        </div>
+        </h2>
         <div className="hidden w-full flex-col items-center justify-start py-5 md:flex">
           <div className="flex w-full items-center justify-between gap-10 py-5">
             <Skill name={SkillEnum.typescript} />
